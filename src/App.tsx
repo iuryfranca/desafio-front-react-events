@@ -1,37 +1,12 @@
-import axios from "axios";
-import { useQuery } from "react-query";
+import { Route, Routes } from "react-router-dom";
+import { Repos } from "./pages/Repos";
+import { Repo } from "./pages/Repo";
 
-type Repository = {
-  full_name: string;
-  description: string;
-};
-
-function App() {
-  const {
-    data: repositories,
-    isFetched,
-    error,
-  } = useQuery<Repository[]>("repos", async () => {
-    const response = await axios.get(
-      "https://api.github.com/users/diego3g/repos"
-    );
-
-    return response.data;
-  });
-
+export function App() {
   return (
-    <ul>
-      {isFetched &&
-        repositories?.map((repository: Repository) => {
-          return (
-            <li key={repository.full_name}>
-              <strong>{repository.full_name}</strong>
-              <li>{repository.description}</li>
-            </li>
-          );
-        })}
-    </ul>
+    <Routes>
+      <Route path="/" element={<Repos />} />
+      <Route path="/Repos/*" element={<Repo />} />
+    </Routes>
   );
 }
-
-export default App;
