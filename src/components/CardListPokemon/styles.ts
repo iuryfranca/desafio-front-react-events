@@ -17,6 +17,15 @@ export const Container = styled.div`
   box-shadow: 5px 5px 10px #ececec;
 
   padding: 15px;
+
+  @media (max-width: 620px) {
+    grid-template-rows: 20px min-content 1fr 1fr;
+
+    width: 150px;
+    height: 120px;
+
+    border-radius: 1rem;
+  }
 `;
 
 export const ImagePokemon = styled.div`
@@ -32,6 +41,10 @@ export const NamePokemon = styled.div`
   font-weight: 900;
   font-size: 20px;
   color: #000362;
+
+  @media (max-width: 620px) {
+    font-size: 18px;
+  }
 `;
 
 export const TypePokemon = styled.span<{ colorBackground: string }>`
@@ -43,6 +56,10 @@ export const TypePokemon = styled.span<{ colorBackground: string }>`
   width: min-content;
   padding: 5px;
   justify-self: center;
+
+  @media (max-width: 620px) {
+    font-size: 10px;
+  }
 `;
 
 export const GroupTypes = styled.div`

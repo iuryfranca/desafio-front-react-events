@@ -42,6 +42,10 @@ export const SearchPokemon = styled.input`
     color: var(--gray-300);
   }
 
+  @media (max-width: 1024px) {
+    width: 40rem;
+  }
+
   @media (max-width: 620px) {
     width: 22rem;
   }
