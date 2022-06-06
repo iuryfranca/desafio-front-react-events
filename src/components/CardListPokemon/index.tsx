@@ -10,11 +10,12 @@ export type CardListPokemonProps = {
     };
   }[];
   sprites: string;
+  onClick: (option: any) => void;
 };
 
 export function CardListPokemon(props: CardListPokemonProps) {
   return (
-    <S.Container>
+    <S.Container onClick={props.onClick}>
       <S.ImagePokemon>
         <img src={props.sprites} alt="Nome Pokemon" />
       </S.ImagePokemon>

@@ -18,7 +18,6 @@ export const GroupSearch = styled.div`
 
 export const ImgSearch = styled.img`
   height: 2.5rem;
-  z-index: 10;
   margin-left: -4rem;
 `;
 

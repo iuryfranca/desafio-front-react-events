@@ -1,37 +1,43 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: grid;
-  grid-template-rows: min-content 25px 1fr 1fr;
+export const ModalBackground = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100vh;
 
-  cursor: pointer;
-
-  width: 250px;
-  height: 170px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  background-color: var(--white);
-  box-sizing: border-box;
-  border-radius: 2rem;
-
-  box-shadow: 5px 5px 10px #ececec;
-
-  padding: 15px;
-
-  @media (max-width: 620px) {
-    grid-template-rows: 20px min-content 1fr 1fr;
-
-    width: 150px;
-    height: 120px;
-
-    border-radius: 1rem;
-  }
+  z-index: 10;
 `;
 
+export const ModalContainer = styled.div`
+  display: grid;
+  grid-template-rows: min-content repeat(6, min-content) 1fr;
+  width: 350px;
+  height: 450px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  row-gap: 5px;
+
+  padding: 30px;
+
+  text-align: center;
+  margin-top: 10px;
+`;
+
+export const TitleCloseBtn = styled.div`
+  display: flex;
+  justify-content: flex-end;
+
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+`;
 export const ImagePokemon = styled.div`
-  margin-top: -55%;
+  height: auto;
 `;
 export const NumberPokemon = styled.div`
   font-size: 12px;
@@ -41,7 +47,7 @@ export const NumberPokemon = styled.div`
 
 export const NamePokemon = styled.div`
   font-weight: 900;
-  font-size: 20px;
+  font-size: 26px;
   color: #000362;
 
   @media (max-width: 620px) {
@@ -70,4 +76,14 @@ export const GroupTypes = styled.div`
 
   justify-content: center;
   column-gap: 0.3rem;
+`;
+
+export const TypePokedex = styled.div`
+  font-weight: 900;
+  font-size: 15px;
+  color: #000362;
+  padding: 8px 0px;
+`;
+export const DescriptionPokemon = styled.div`
+  padding: 0px 50px;
 `;
