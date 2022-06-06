@@ -1,12 +1,13 @@
-import { Route, Routes } from "react-router-dom";
-import { Repos } from "./pages/Repos";
-import { Repo } from "./pages/Repo";
+import { Header } from "./components/Header";
+import { ListPokemon } from "./components/ListPokemon";
+import { GlobalStyle } from "./styles/global";
 
 export function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Repos />} />
-      <Route path="/Repos/*" element={<Repo />} />
-    </Routes>
+    <>
+      <Header />
+      <ListPokemon />
+      <GlobalStyle />
+    </>
   );
 }
