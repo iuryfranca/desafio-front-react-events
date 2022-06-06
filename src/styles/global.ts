@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     --cyan-500: #61dafb;
 
     --yellow-500: #ffc107;
-    
+
+    // Colors to Filters Pokemons
     --normal: #a8a878;
     --fire: #f39d30;
     --water: #6890f0;

@@ -4,7 +4,7 @@ export function Header() {
   return (
     <S.HeaderContainer>
       <S.HeaderContent>
-        <img src="/images/pokedex.png" alt="Logo" width="400px" height="70px" />
+        <S.Img src="/images/pokedex.png" alt="Logo" />
       </S.HeaderContent>
     </S.HeaderContainer>
   );

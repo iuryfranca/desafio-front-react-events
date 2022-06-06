@@ -18,3 +18,13 @@ export const HeaderContent = styled.div`
     align-self: center;
   }
 `;
+
+export const Img = styled.img`
+  width: 25rem;
+  height: 4.5rem;
+
+  @media (max-width: 720px) {
+    width: 22rem;
+    height: 4rem;
+  }
+`;

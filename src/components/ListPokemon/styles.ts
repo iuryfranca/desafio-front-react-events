@@ -11,6 +11,8 @@ export const ContentContainer = styled.main`
 export const GroupSearch = styled.div`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   justify-content: space-between;
 `;
 
@@ -39,6 +41,10 @@ export const SearchPokemon = styled.input`
   ::placeholder {
     color: var(--gray-300);
   }
+
+  @media (max-width: 620px) {
+    width: 22rem;
+  }
 `;
 
 export const GroupList = styled.div`
@@ -49,6 +55,10 @@ export const GroupList = styled.div`
   margin-top: 5rem;
 
   justify-content: space-around;
+
+  @media (max-width: 720px) {
+    row-gap: 3rem;
+  }
 `;
 
 export const GroupButton = styled.div`
