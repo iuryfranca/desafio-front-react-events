@@ -20,7 +20,7 @@ export const ModalContainer = styled.div`
   height: 450px;
 
   display: grid;
-  grid-template-rows: min-content repeat(6, min-content) 1fr;
+  grid-template-rows: repeat(7, min-content) 1fr;
 
   border-radius: 12px;
   background-color: white;
@@ -30,6 +30,11 @@ export const ModalContainer = styled.div`
   padding: 30px;
   text-align: center;
   margin-top: 10px;
+
+  @media (max-width: 620px) {
+    width: 270px;
+    height: 400px;
+  }
 `;
 
 export const TitleCloseBtn = styled.div`
@@ -42,7 +47,15 @@ export const TitleCloseBtn = styled.div`
   cursor: pointer;
 `;
 export const ImagePokemon = styled.div`
-  height: auto;
+  height: 100%;
+`;
+
+export const Img = styled.img`
+  height: 180px;
+
+  @media (max-width: 620px) {
+    height: 150px;
+  }
 `;
 export const NumberPokemon = styled.div`
   font-size: 12px;
