@@ -50,7 +50,7 @@ export const ModalDetails: React.FC<IModalDetails> = (props) => {
             </button>
           </S.TitleCloseBtn>
           <S.ImagePokemon>
-            <img src={props.sprites} alt="Nome Pokemon" height={180} />
+            <S.Img src={props.sprites} alt="Nome Pokemon" />
           </S.ImagePokemon>
           <S.NumberPokemon>Nº{props.id}</S.NumberPokemon>
           <S.NamePokemon>{props.name}</S.NamePokemon>
