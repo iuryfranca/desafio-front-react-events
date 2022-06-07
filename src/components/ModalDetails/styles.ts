@@ -1,28 +1,33 @@
 import styled from "styled-components";
 
 export const ModalBackground = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100vh;
+  position: "fixed";
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  width: "100%";
+  height: "100%";
+
+  top: 0;
+  left: 0;
+
+  background-color: "rgba(0, 0, 0, 0.8)";
 `;
 
 export const ModalContainer = styled.div`
-  display: grid;
-  grid-template-rows: min-content repeat(6, min-content) 1fr;
+  position: absolute;
+  margin: 50px auto 0;
+
   width: 350px;
   height: 450px;
+
+  display: grid;
+  grid-template-rows: min-content repeat(6, min-content) 1fr;
+
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   row-gap: 5px;
 
   padding: 30px;
-
   text-align: center;
   margin-top: 10px;
 `;

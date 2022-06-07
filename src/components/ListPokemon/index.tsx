@@ -9,19 +9,14 @@ import * as S from "./styles";
 
 interface IListPokemon {
   onChange: (option: any) => void;
-  dataPokemonCardDetails: (data: any) => void;
 }
 
-export function ListPokemon({
-  onChange,
-  dataPokemonCardDetails,
-}: IListPokemon) {
+export function ListPokemon({ onChange }: IListPokemon) {
   const { getPokemonSpecies, getPokemonSpeciesByPage } = pokemonData;
 
   const [pokemonList, setPokemonList] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState<string | null>(null);
   const [inputType, setInputType] = useState<string | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
 
   const typesFilter = queryClient.getQueryData<any[]>("typesFilter") as any[];
 
@@ -100,9 +95,7 @@ export function ListPokemon({
             pokemonListFormattedFiltered.map(({ sprites, id, ...rest }) => (
               <CardListPokemon
                 onClick={() => {
-                  setModalOpen(true);
-                  onChange(modalOpen);
-                  dataPokemonCardDetails({ sprites, id, ...rest });
+                  onChange({ sprites, id, ...rest });
                 }}
                 {...rest}
                 key={id}
